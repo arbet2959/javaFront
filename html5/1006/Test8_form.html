@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>test8_form.html(폼태크연습)</title>
+</head>
+<body>
+  <h2>폼태그 연습</h2>
+  <hr/>
+  <h2>회 원 가 입</h2>
+  <form name="myform" method="post" action="서버에서받을파일명.jsp">
+    <fieldset>
+      <ul>
+        <li>
+          <label for="name">이름</lable>
+          <input type="text" name="name" id="name">
+        </li>
+        <li>
+          <label for="email">메일주소</lable>
+          <input type="text" name="email" id="email">
+        </li>
+        <li>
+          <label for="gender">성별</lable>
+          <input type="radio" name="gender" id="gender" value="남자" checked> 남자
+          <input type="radio" name="gender" id="gender" value="여자"> 여자
+        </li>
+        <li>
+          <input type="button" value="가입하기">
+        </li>
+      </ul>
+    </fieldset>
+  </form>
+</body>
+</html>

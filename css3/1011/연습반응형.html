@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습</title>
+    <style>
+        body{
+            margin: 0px 50px;
+        }
+        .container{
+            width: 100%;
+            height: 850px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        #head{
+            clear: both;
+            width: 100%;
+            height: 200px;
+            line-height: 200px;
+            border: 1px solid gray;
+            background-image: url("../../images/2.jpg");
+            background-size: 100%;
+            background-blend-mode: hard-light;
+        }
+        #left{
+            width: 15%;
+            height: 600px;
+            line-height: 600px;
+            float: left;
+            border: 1px solid gray;
+        }
+        #center{
+            width: 74%;
+            height: 600px;
+            line-height: 600px;
+            float: left;
+            border: 1px solid gray;
+        }
+        #right{
+            width: 10%;
+            height: 600px;
+            line-height: 600px;
+            float: left;
+            border: 1px solid gray;
+        }
+        #foot{
+            width: 100%;
+            height: 200px;
+            line-height: 200px;
+            clear:both;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="head">head</div>
+    <div class="box" id="left">left</div>
+    <div class="box" id="center">center</div>
+    <div class="box" id="right">right</div>
+    <div class="box" id="foot">foot</div>
+</body>
+</html>
