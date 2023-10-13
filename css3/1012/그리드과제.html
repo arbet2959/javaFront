@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드과제</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas:
+            'head head head'
+            'content1 content1 aside'
+            'foot foot foot';
+            height: 800;
+            margin: 50;
+            grid-template-rows: 150px 1fr 100px;
+            grid-template-columns: 200px 1fr 100px;
+        }
+        .item{
+            padding: 30px;
+        }
+        .head{
+            grid-area: head;
+            background-color: red;
+        }
+        .content{
+            grid-area: content1;
+            background-color: blue;
+        }
+        .aside{
+            grid-area: aside;
+            background-color: yellow;
+        }
+        .foot{
+            grid-area: foot;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item head">head</div>
+        <div class="item content">content</div>
+        <div class="item aside">aside</div>
+        
+        <div class="item foot">foot</div>
+    </div>
+</body>
+</html>

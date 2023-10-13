@@ -1,0 +1,32 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 1000px;
+    height: 100vh;
+    background-color: #eee;
+}
+.item{
+    padding:10px;
+    margin: 10px;
+    background-color: blanchedalmond;
+    /* text-align: center; */
+}
+.big-item1, .big-item2{
+    display: grid;
+    margin: 20px;
+}
+/*
+.big-item1{
+    grid-template-columns: repeat(3,200px);
+}
+.big-item2{
+    grid-template-columns: repeat(4,100px);
+}
+*/
+
+.big-item1{
+    grid-template-rows: 100px 200px;
+    grid-template-columns: repeat(3,200px)
+}
