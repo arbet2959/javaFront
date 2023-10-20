@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수표현식.html</title>
+    <script>
+        'use strict';
+        const mbc = function(){
+            console.log("함수표현식입니다");
+        };
+        // const mbc2 = function(su1, su2){
+        //     return su1+su2;
+        // }
+
+        // const mbc2 = (su1,su2)=>{
+        //     return su1+su2;
+        // }
+        const mbc2 = (su1,su2)=>su1+su2;
+        
+        console.log("mbc : "+ mbc);
+        console.log("mbc : ", mbc2(10,20));
+        
+        
+        function calc(su1, su2){
+            console.log(su1 + su2);
+        }
+    </script>
+</head>
+<body>
+    <h2>함수표현식</h2>
+    <input type="button" value="계산" onclick="calc(50,200)">
+</body>
+</html>

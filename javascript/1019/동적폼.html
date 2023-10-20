@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- 폰트어썸 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
+    <script>
+        'use strict';
+        let newText="";
+        let idx=0;
+        let newTextArr=[];
+        function inputBox(){
+            idx++;
+            newText="";
+            newText += '<div id="productBox'+idx+'">';
+            newText += '<input type="text" name="product" id="product'+idx+'" class="mb-2 mr-3">';
+            newText += '<input type="button" value="'+idx+'.삭제" onclick="deleteBox('+idx+')" class="btn btn-success"><br>';
+            newText += '</div>'
+            demo1.innerHTML += newText;
+        }
+
+        function deleteBox(idx){
+            let productBox = "productBox"+idx
+            let item = document.getElementById(productBox);
+            // item.parentNode.removeChild(item);
+            item.remove(item);
+        }
+        function readBox(){
+            let sum=0;
+            demo2.innerText = "";
+            newTextArr = document.getElementsByName("product");
+            for(let i=0;i<newTextArr.length;i++){
+                sum += Number(newTextArr[i].value);
+            }
+            demo2.innerText = sum;
+            
+        }
+
+
+    </script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+    <h2>입력창 추가(동적폼)</h2>
+    <form name="myform">
+    <p>
+        <input type="button" value="입력창추가" onclick="inputBox()" class="btn btn-success">
+        <input type="button" value="입력창읽기" onclick="readBox()" class="btn btn-success">
+        
+        <input type="button" value="입력창모두제거" onclick="location.reload()" class="btn btn-success">
+    </p>
+    </form>
+    <hr>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+</div>
+</body>
+</html>

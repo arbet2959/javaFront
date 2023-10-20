@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규식</title>
+    <script src="test7_정규식기본.js"></script>
+</head>
+<body>
+    <h2>정규식(Regex)</h2>
+    <form name="myform">
+        <div>문자열:
+            <!-- <p><input type="textarea" name="content" id="content" rows="4" autofocus required></p> -->
+            <p><input type="text" name="content" id="content" autofocus required></p>
+            <p><input type="button" value="정규식체크" onclick="regexCheck()" ></p>
+        </div>
+    </form>
+    <hr>
+    <pre>
+        g(global) : 전체범위에서의 처리
+        m(multy line) : 여러줄처리(textarea에 사용)
+        s(single) : 한줄처리(default)
+        i = 영문자인경우에 대/소문자의 구별을 하지 않는다.
+        u(unicode) : 유니코드에대한 구별처리
+
+        정규식을 실행하기위해서 사용되는 함수?
+            1. 사용자입력문자열.match(정규식)  문자열에서 정규표현식에 매칭되는 항목들을 배열로 반환
+            2. 정규식.test(사용자문자열) 문자열이 정규표현식과 매칭되면 true 아니면 false반환
+    </pre>
+    <p>웹에서 서버로 값을 전송할시에는 사용자 값을 입력후 반드시 유효성 검사를 거쳐야한다.</p>
+</body>
+</html>

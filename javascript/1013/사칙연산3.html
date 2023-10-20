@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사칙연산</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script>
+        function add(){
+            let su1 = document.myform.su1.value;
+            let su2 = document.myform.su2.value;
+            res=parseInt(su1)+parseInt(su2);
+            alert("두수의 합 "+res)
+        }
+        function sub(){
+            let su1 = document.myform.su1.value;
+            let su2 = document.myform.su2.value;
+            res=su1-su2;
+            alert("두수의 차 "+res)
+        }
+        function mul(){
+            let su1 = document.myform.su1.value;
+            let su2 = document.myform.su2.value;
+            res=su1 * su2;
+            alert("두수의 곱 "+res)
+        }
+        function div(){
+            let su1 = document.myform.su1.value;
+            let su2 = document.myform.su2.value;
+            res=su1 / su2;
+            alert("두수의 몫 "+ res)
+        }
+        function calc(){
+            let su1 = document.myform.su1.value;
+            let su2 = document.myform.su2.value;
+            let op = document.myform.op.value;
+
+            // if(op=="+") add();
+            // else if(op=="-") sub();
+            // else if(op=="*") mul();
+            // else if(op=="/") div();
+            // else alert("연산자 오류");
+            alert(eval(su1+op+su2));
+        }
+    </script>
+</head>
+<body>
+    <p><br></p>
+    <div class="container">
+        <h2>폼태그와 자바스크립트</h2>
+        <form name="myform">
+            <div class="form-group">
+                <label for="su1">첫번째 수 :</label> 
+                <input type="number" name="su1" id="su1" value="0" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="op">연산자</label> 
+                <select name="op" id="op" class="form-control">
+                    <option value="+">더하기</option>
+                    <option value="-">빼기</option>
+                    <option value="*">곱하기</option>
+                    <option value="/">나누기</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="su2">두번째 수 :</label> 
+                <input type="number" name="su2" id="su2" value="0" class="form-control">
+            </div>
+            
+            <div class="row">
+                <div class="col"><input type="button" value="계산하기" onclick="calc()" class="btn btn-success form-control"></div>
+                <!-- <div class="col"><input type="button" value="더하기" onclick="add()" class="btn btn-success form-control"></div>
+                <div class="col"><input type="button" value="빼  기" onclick="sub()" class="btn btn-success form-control"></div>
+                <div class="col"><input type="button" value="곱하기" onclick="mul()" class="btn btn-primary form-control"></div>
+                <div class="col"><input type="button" value="나누기" onclick="div()" class="btn btn-primary form-control"></div>
+                <div class="col"><span class="badge badge-warning" onclick="" style="cursor:pointer">123</span></div> -->
+                
+            </div>
+        </form>
+    </div>
+</body>
+</html>

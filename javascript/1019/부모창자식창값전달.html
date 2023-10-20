@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- 폰트어썸 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>
+    <script>
+        'use strict';
+        let childWindow;
+        function idCheck(){
+            let url = "child.html";
+            let winName = "idwindow";
+            let childWidth= 500;
+            let childHeight= 400;
+            let x = window.screen.width/2 - (childWidth/2);
+            let y = window.screen.height/2 - (childHeight/2);
+            // let opt = "width="+childWidth+", height="+childHeight+", left="+x+" top="+y+" resizable=no scrollbars=no";
+            let opt = `width= ${childWidth}, height= ${childHeight}, left=${x} top=${y} resizable=no scrollbars=no`;
+
+            childWindow = open(url, winName,opt);
+        }
+        
+        function childClose(){
+            childWindow.close();
+        }
+    </script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+    <h2>새창에 값 전달하기</h2>
+    <form name = "myform">
+        <p>아이디
+            <input type="text" name="mid" id="mid" value="hkd1234" autofocus>
+            <input type="button" value="중복체크" onclick="idCheck()" class="btn btn-success">
+        </p>
+        <p>비밀번호
+            <input type="password" name="pwd" id="pwd">
+        </p>
+        <p>
+            <input type="button" value="자식창닫기" onclick="childClose()" class="btn btn-info"
+        </p>
+    </form>
+</div>
+</body>
+</html>

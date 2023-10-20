@@ -1,0 +1,41 @@
+
+_age
+age
+
+get age 
+set age
+
+
+.age
+._age
+
+-------------------------
+_age //데이터 프로퍼티
+#age
+_$
+get age //접근자 프로퍼티
+return _age
+set age (a)
+_age = a
+#age
+
+privateField = 10;
+
+.age =a;
+
+#age
+age
+
+함수 getage(){return #age}
+.age
+
+get age(){
+}
+
+
+_age
+age
+
+
+
+

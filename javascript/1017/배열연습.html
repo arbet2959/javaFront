@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        'use strict';
+        const arr1 = new Array();
+        console.log(arr1);
+
+        const arr2 = ['사과','배','바나나','딸기','포도'];
+        console.log(arr2);
+        console.log(arr2.length);
+        
+        arr2.push("참외","앵두","자두");
+        console.log(arr2);
+        // arr2.forEach(arr => console.log(arr));
+
+        arr2.unshift("키위","토마토");
+        // console.log(arr2);
+        arr2.forEach(arr => console.log(arr))
+        
+        console.log("=================================================================");
+        
+        
+
+        let fruits= arr2.slice(3,7); //3~6까지 7미포함
+        console.log(fruits);
+
+        let concatFruits = arr2.concat(fruits);
+        console.log(concatFruits);
+        
+        console.log(concatFruits.indexOf("자두"));
+        console.log(concatFruits.lastIndexOf("자두"));
+        console.log(concatFruits.includes("자두"));
+        </script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+    <h2>배열연습</h2>
+</div>
+</body>
+</html>

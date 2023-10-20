@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict';
+        //드래그금지
+        document.onselectstart = function() {
+            alert("드래그금지");
+            return false;
+        };
+        //우클릭금지
+        document.oncontextmenu = function() {
+            alert("마우스 오른쪽 버튼은 사용할수 없습니다.");
+            return false;
+        };
+        //키보드 단축키 복사 방지
+        document.onkeydown =  function() {
+            alert("키보드블럭");
+            return false;
+        };
+    </script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+    <h2>마우스 오른쪽 버튼클릭 방지하기</h2>
+    <input type="button" value="마우스좌클릭" onclick="alert('마우스 왼쪽버튼을 클릭하셨습니다.')" class="btn btn-success">
+</div>
+</body>
+</html>

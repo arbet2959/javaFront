@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열2</title>
+    <script>
+        'use strict';
+        const temp= [10,'a','A',"abc",true,3.14];
+
+        console.log(temp)
+        // for(let t in temp){   //인덱스추출
+        for(let t of temp){     //값추출
+            console.log(t);
+        }
+        console.log("=======================================");
+        const bigo = "seoul"
+        for(let i=0; i<bigo.length;i++){
+            console.log(bigo.charAt(i));;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

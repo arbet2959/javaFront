@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <script>
+        'use strict';
+        const object1 = {
+            name:"김영민",
+            email:"wlsl3472@naver.com",
+            age : 21,
+            birthday : new Date(),
+            introduce : function(){console.log("Hi")}
+        };
+        object1.introduce();
+        console.log(object1);
+        const str = JSON.stringify(object1);
+
+        console.log(str);
+        console.log("===================================================================================");
+        let json=JSON.stringify(object1,(key,value)=>{
+            // return key, value;
+            return key == 'name' ? '관리자' : value;
+        });
+        console.log(json);
+        console.log("===================================================================================");
+        let obj = JSON.parse(json);
+        console.log(obj);
+        console.log(typeof obj.birthday);
+        console.log(obj.birthday);
+        // console.log(obf.birthday.getDate()) //String타입 파서되면 date타입으로 복구되지 않음;
+        let obj2 = JSON.parse(json,(key,value)=>{
+            
+            return key == 'birthday' ? new Date(value) : value;
+        });
+        console.log(obj2.birthday);
+        console.log(obj2.birthday.getDate());
+        console.log(typeof obj2.birthday); //객체타입
+    </script>
+</head>
+<body>
+    <h2>JSON</h2>
+    <pre>
+        웹에서의 서버와 데이터 전송방식에서 사용.
+        프로그램 종류나 플랫폼 무관
+        "키" : "값" 으로 구성
+        Object를 String으로 직렬화처리해서 Json으로 만들어서 전송 JSON.stringify()
+            숫자->숫자,메서드X,날짜형식지원X
+        Json형식을 다시 Object로 변환해서 사용 JSON.parse()
+    </pre>
+</body>
+</html>

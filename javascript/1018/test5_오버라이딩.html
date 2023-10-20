@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test5</title>
+    <script>
+        'use strict';
+
+        class Shape {
+            constructor(width, height){
+                this.width =width;
+                this.height = height;
+            }
+
+            getArea() {
+                return this.width * this.height;
+            }
+        }
+
+        let shape = new Shape(10,20);
+        console.log(shape.getArea());
+
+        
+        class ChildShape1 extends Shape {}
+        let childShape1 = new ChildShape1(50,60);
+        console.log(childShape1.getArea());
+
+
+        class ChildShape2 extends Shape {
+            getArea() {
+                return this.width * this.height+ 100;
+            }
+        }
+        let childShape2 = new ChildShape2(50,60);
+        console.log(childShape2.getArea());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

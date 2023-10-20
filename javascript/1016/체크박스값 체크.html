@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>같은이름 name으로 처리</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script>
+        'use strict';
+
+        function fCheck() {
+            let hobbys = '';
+            for(let i=0;i<document.getElementsByName("hobby").length;i++){
+                if(document.getElementsByName("hobby")[i].checked)
+                    hobbys +=document.getElementsByName("hobby")[i].value+" ";
+            }
+            hobbys += '<input type="button" value="지우기" onclick="fClear()">';
+            demo.innerHTML = hobbys;
+        }
+        
+        function fClear() {
+            for(let i=0;i<document.getElementsByName("hobby").length;i++){
+                document.getElementsByName("hobby")[i].checked = false;
+            }
+            demo.innerHTML = "";
+        }    
+            
+        
+        
+    </script>
+</head>
+<body>
+<p><br></p>
+<div class="container">
+    <h2>같은이름 name으로 처리</h2>
+    <form name="myform">
+        <p><b>취미를 선택하세요</b></p>
+        <p>
+            <input type="checkbox" name="hobby" id="hobby1" value="등산">등산<br>
+            <input type="checkbox" name="hobby" id="hobby2" value="낚시">낚시<br>
+            <input type="checkbox" name="hobby" id="hobby3" value="수영">수영<br>
+            <input type="checkbox" name="hobby" id="hobby4" value="볼링">볼링<br>
+            <input type="checkbox" name="hobby" id="hobby5" value="바둑">바둑<br>
+            <input type="checkbox" name="hobby" id="hobby6" value="싸이클">싸이클<br>
+            <input type="checkbox" name="hobby" id="hobby7" value="탁구">탁구<br>
+            <input type="checkbox" name="hobby" id="hobby8" value="독서">독서<br>
+        </p>
+        <input type="button" value="출력" onclick=fCheck() class ="btn btn-success">
+    </form>
+    <div id="demo"></div>
+</div>
+</body>
+</html>

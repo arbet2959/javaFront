@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test5.html</title>
+    <script>
+        //호이스팅(hoisting) : var 선언은 최상단으로 호이스팅 적용 초기화O 할당은X ->undefined로 초기화돼잇음
+                            // let도 최상단으로 호이스팅 적용 초기화X 할당X ->reference Error발생
+                            // const도 호이스팅 적용 초기화X 할당X
+        //var는 함수범위or전역 다른{}는 무시
+        //var는 재선언 가능
+        //const는 업데이트 X if개체라면 속성업데이트는 가능
+        var mbc=100;
+        console.log(mbc);
+        function calc(){
+            var mbc =50;
+            console.log("mbc = "+mbc);
+            
+        }
+        calc();
+        console.log(mbc)
+    </script>
+</head>
+<body>
+    <h2>변수의 선언</h2>
+    <input type="button" value="계산" onclick="calc()">
+</body>
+</html>
